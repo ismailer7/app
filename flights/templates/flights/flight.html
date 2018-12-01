@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
+{% extends 'flights/base.html' %}
 
-	<head>
+{% block title %} Flights info {% endblock %} 
 
-		<title>Flights</title>
-
-	</head>
-
-	<body>
+{% block body %} 	
+	<h1>Flights {{ flight.id }}</h1>
 		
-		<h1>Flights {{ flight.id }}</h1>
-		
-		<ul>
-			<li>Origin : {{ flight.origin }}</li>	
-			<li>Destination : {{ flight.destination }}</li>
-			<li>Dration : {{ flight.dration }}</li>
-		</ul>
+	<ul>
+		<li>Origin : {{ flight.origin }}</li>	
+		<li>Destination : {{ flight.destination }}</li>
+		<li>Dration : {{ flight.dration }}</li>
+	</ul>
 
-		<a href="{% url 'index' %}">Back to full listing</a>
-
-	</body>
-
-</html>
+	<a href="{% url 'index' %}">Back to full listing</a>
+{% endblock %} 
