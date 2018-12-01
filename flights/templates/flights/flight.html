@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
+
 		<title>Flights</title>
+
 	</head>
 
 	<body>
@@ -13,7 +16,9 @@
 			<li>Destination : {{ flight.destination }}</li>
 			<li>Dration : {{ flight.dration }}</li>
 		</ul>
-	
+
+		<a href="{% url 'index' %}">Back to full listing</a>
+
 	</body>
 
 </html>
