@@ -1,6 +1,6 @@
 {% extends 'flights/base.html' %}
 
-{% block title %} Flights info {% endblock %} 
+{% block title %} Flights {{ flight.id }} {% endblock %} 
 
 {% block body %} 	
 	<h1>Flights {{ flight.id }}</h1>
@@ -10,6 +10,13 @@
 		<li>Destination : {{ flight.destination }}</li>
 		<li>Dration : {{ flight.dration }}</li>
 	</ul>
-
+	<h2>Passengers</h2>
+	<ul>
+		{% for passenger in passengers %}
+			<li>{{ passenger.id }} - {{ passenger }}</li>
+		{% empty %}
+			<li>There is no Passengers</li>
+		{% endfor %}
+	</ul>
 	<a href="{% url 'index' %}">Back to full listing</a>
 {% endblock %} 
