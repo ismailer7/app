@@ -13,7 +13,7 @@ class Flight(models.Model):
 	origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='departures')
 	destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='arrival')
 	dration = models.IntegerField(default=0)
-
+	
 	def __str__(self):
 		return f"{self.id} - {self.origin} to {self.destination}"
 

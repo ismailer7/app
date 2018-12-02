@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<int:flight_id>', views.flight, name='flight'),
     path('login/', views.login_in, name='login'),
-    path('logout/', views.login_out, name='logout')
+    path('logout/', views.login_out, name='logout'),
+    path('register/', views.register, name='register'),
 ]
